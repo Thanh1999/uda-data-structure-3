@@ -1,5 +1,8 @@
 def rearrange_digits(input_list):
 
+    if not input_list:
+        return
+
     def merge_sort(arr):
         if len(arr) <= 1:
             return arr
@@ -37,7 +40,6 @@ def rearrange_digits(input_list):
     sorted_list = merge_sort(input_list)
 
     # Step 3: Join the sorted list of strings to form two numbers
-    print(sorted_list)
     number1 = int(''.join(sorted_list[::2]))
     number2 = int(''.join(sorted_list[1::2]))
 
@@ -55,3 +57,12 @@ def test_function(test_case):
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
 test_function(test_case)
+
+# Case correct expected numbers
+assert rearrange_digits([7, 8, 4, 9, 5, 2]) ==[974, 852]
+
+# Case incorrect expected numbers
+assert rearrange_digits([6, 8, 4, 9, 5, 2]) != [954, 862]
+
+# Case list is None
+assert rearrange_digits(None) == None

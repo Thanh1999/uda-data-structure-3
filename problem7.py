@@ -58,6 +58,8 @@ class Router:
         self.trie.insert(path_parts, handler)
         
     def lookup(self, path):
+        if not path:
+            return self.not_found_handler
         # Split the path into parts
         path_parts = self.split_path(path)
         
@@ -95,3 +97,13 @@ print(router.lookup("/home")) # should print 'not found handler' or None if you 
 print(router.lookup("/home/about")) # should print 'about handler'
 print(router.lookup("/home/about/")) # should print 'about handler' or None if you did not handle trailing slashes
 print(router.lookup("/home/about/me")) # should print 'not found handler' or None if you did not implement one
+
+# Case found handler from path
+router.add_handler("/search", "search handler") 
+assert router.lookup("/search") == "search handler"
+
+# Case not found handler from path
+assert router.lookup("/new") == "not found handler"
+
+# Case path is None
+assert router.lookup(None) == "not found handler"
