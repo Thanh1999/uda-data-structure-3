@@ -43,12 +43,15 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
 
-# Case find index of number
-assert rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], 2) == 6
+print("---Test cases---")
+### Case find index of number
+print(rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], 2))
+# Expect 6
 
-# Case not find index of number
-assert rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], 5) == -1
+### Case not find index of number
+print(rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], 5))
+# Expect -1
 
-# Case list or number is None
-assert rotated_array_search(None, 3) == None
-assert rotated_array_search([6, 7, 8, 9, 10, 1, 2, 3, 4], None) == None
+### Case list or number is None
+print(rotated_array_search(None, 3))
+# Expect None

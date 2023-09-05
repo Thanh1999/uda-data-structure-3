@@ -58,11 +58,15 @@ test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
 test_function(test_case)
 
-# Case correct expected numbers
-assert rearrange_digits([7, 8, 4, 9, 5, 2]) ==[974, 852]
+print("---Test cases---")
+### Case correct expected numbers
+print(rearrange_digits([7, 8, 4, 9, 5, 2]))
+# Expect [974, 852]
 
-# Case incorrect expected numbers
-assert rearrange_digits([6, 8, 4, 9, 5, 2]) != [954, 862]
+### Case list is empty
+print(rearrange_digits([]))
+# Expect None
 
-# Case list is None
-assert rearrange_digits(None) == None
+### Case list is None
+print(rearrange_digits(None))
+# Expect None

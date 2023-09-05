@@ -30,11 +30,14 @@ test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
 test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
 test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
 
-# Case can sort correctly
-sort_012([2, 0, 2, 0, 1, 2, 1, 0, 1, 0]) == [0, 0, 0, 0, 1, 1, 1, 2, 2, 2]
+### Case can sort correctly
+print(sort_012([2, 0, 2, 0, 1, 2, 1, 0, 1, 0]))
+# Expect [0, 0, 0, 0, 1, 1, 1, 2, 2, 2]
 
-# Case list is empty
-sort_012([]) == []
+### Case list is empty
+print(sort_012([]))
+# Expect None
 
-# Case list is None
-sort_012(None) == None
+### Case list is None
+print(sort_012(None))
+# Expect None

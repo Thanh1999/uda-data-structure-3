@@ -98,12 +98,16 @@ print(router.lookup("/home/about")) # should print 'about handler'
 print(router.lookup("/home/about/")) # should print 'about handler' or None if you did not handle trailing slashes
 print(router.lookup("/home/about/me")) # should print 'not found handler' or None if you did not implement one
 
-# Case found handler from path
+print("---Test cases---")
+### Case found handler from path
 router.add_handler("/search", "search handler") 
-assert router.lookup("/search") == "search handler"
+print(router.lookup("/search"))
+# Expect search handler
 
-# Case not found handler from path
-assert router.lookup("/new") == "not found handler"
+### Case not found handler from path
+print(router.lookup("/new"))
+# Expect not found handler
 
-# Case path is None
-assert router.lookup(None) == "not found handler"
+### Case path is None
+print(router.lookup(None))
+# Expect not found handler

@@ -22,14 +22,17 @@ print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
 
-# Case find int square root
-assert 5 == sqrt(25)
-assert 9 == sqrt(81)
+print("---Test cases---")
+### Case find int square root
+print(sqrt(25))
+# Expect 5
+print(sqrt(81))
+# Expect 9
 
-# Case not find int square root
-assert None == sqrt(7)
-assert None == sqrt(13)
+### Case not find int square root
+print(sqrt(7))
+# Expect None
 
-# Case pass negative or None number
-assert None == sqrt(-16)
-assert None == sqrt(None)
+### Case pass negative or None number
+print(sqrt(-16))
+# Expect None

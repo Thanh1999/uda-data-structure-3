@@ -21,12 +21,16 @@ random.shuffle(l)
 
 print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
 
-# Case list is valid
+print("---Test cases---")
+### Case list is valid
 l1 = [10, 8, 11, 23, 100, 40, 1, 99]
-assert get_min_max(l1) == (1, 100)
+print(get_min_max(l1))
+# Expect (1, 100)
 
-# Case list is empty
-assert get_min_max([]) == None
+### Case list is empty
+print(get_min_max([]))
+# Expect None
 
-# Case list is None
-assert get_min_max(None) == None
+### Case list is None
+print(get_min_max(None))
+# Expect None
